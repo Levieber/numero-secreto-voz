@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap");
+
+:root {
+  --font-family: "Roboto", sans-serif;
+  --primary-color: #e8f9fd;
+  --secondary-color: #0aa1dd;
+}
+
+body {
+  align-items: center;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family);
+  font-weight: 400;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.title {
+  font-size: 5em;
+  font-weight: 400;
+}
+
+.range-number,
+.secret-number {
+  font-size: 2.5em;
+  font-weight: 100;
+  margin-top: 20px;
+}
+
+.message {
+  font-size: 1.5em;
+  margin-top: 35px;
+}
+
+.box {
+  border: 2px solid var(--primary-color);
+  display: inline-block;
+  font-size: 4em;
+  margin: 20px;
+  padding: 10px 50px;
+}
+
+.btn-play {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: 2px solid transparent;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 1em 1.5em;
+  transition: 0.5s ease-in-out;
+}
+
+.btn-play:hover {
+  background-color: transparent;
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+@media screen and (max-width: 665px) {
+  .title {
+    font-size: 3.5em;
+  }
+  .range-number,
+  .secret-number {
+    font-size: 1.7em;
+    margin: 20px 5px 0 5px;
+  }
+  .box {
+    font-size: 2.7em;
+    padding: 10px 30px;
+  }
+}
+
+@media screen and (max-width: 405px) {
+  .title {
+    font-size: 2.4em;
+    margin: 0 5px;
+  }
+  .message {
+    font-size: 1.2em;
+  }
+}

@@ -12,5 +12,3 @@ const elementHighestValue = document.getElementById("highest-value");
 
 elementLowerValue.innerText = lowerValue;
 elementHighestValue.innerText = highestValue;
-
-console.log(secretNumber);

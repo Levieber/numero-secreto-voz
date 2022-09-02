@@ -2,8 +2,17 @@ function validValue(tryValue) {
   const number = +tryValue;
 
   if (isNumber(number)) {
-    elementTry.innerHTML += "<div>Valor inválido: não é número</div>";
-    return;
+    if (tryValue.toUpperCase() === "GAME OVER") {
+      document.body.innerHTML = `
+      <h2 class="title">Game Over!!!</h2>
+      <h3 class="info">Pressione o botão para jogar novamente</h3>
+      <button id="play-again" class="btn-play">Jogar novamente</button>
+      `;
+      document.body.style.backgroundColor = "red";
+    } else {
+      elementTry.innerHTML += "<div>Valor inválido: não é número</div>";
+      return;
+    }
   }
 
   if (numberInRange(number)) {
@@ -14,7 +23,7 @@ function validValue(tryValue) {
   if (number === secretNumber) {
     document.body.innerHTML = `
       <h2 class="title">Você acertou</h2>
-      <h3 class="secret-number">O número secreto era ${secretNumber}</h3>
+      <h3 class="info">O número secreto era ${secretNumber}</h3>
 
       <button id="play-again" class="btn-play">Jogar Novamente</button>
     `;
